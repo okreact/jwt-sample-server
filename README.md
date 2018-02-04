@@ -18,11 +18,11 @@ java -jar jwt-sample-server-0.1.0.jar
 
 1. git clone https://github.com/okreact/jwt-sample-server.git
 2. 설정 변경 혹은 소스 코드 수정 
-3. ``./gradlew bootRun`` 혹은 ``gradlew.bat bootRun`` 명령어로 실행 
+3. ``./gradlew bootRun`` (Windows 에서는 ``gradlew.bat bootRun``) 명령어로 실행 
 
 ## 인증 테스트 방법 
 
-아이디 패스워드를 입력하면 응답 헤더에서 JWT 값을 전달받습니다. 테스트를 위해서 아래와 같이 ``CURL`` 도구를 사용해서 요청하거나 **Postman** 을 이용해서 요청을 할 수 있습니다.
+아이디 패스워드를 입력하면 응답 헤더에서 JWT 값을 전달받습니다. 테스트를 위해서 아래와 같이 **CURL** 도구를 사용해서 요청하거나 **Postman** 을 이용해서 요청을 할 수 있습니다.
 
 ```$bash
 curl -d '{"username":"admin", "password":"tiger"}' -H "Content-Type: application/json" -X POST http://localhost:8080/login -i
